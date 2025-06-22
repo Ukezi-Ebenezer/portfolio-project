@@ -390,6 +390,7 @@ body::-webkit-scrollbar-thumb {background: var(--primary); border-radius: 4px;}
 
 .tool-card:hover{
     background: #f77b5b;
+    transform: translateY(-5px);
 }
 
 .tool-icon{
@@ -439,4 +440,113 @@ body::-webkit-scrollbar-thumb {background: var(--primary); border-radius: 4px;}
     background: var(--primary);
     border-radius: 50% 50% 0 0;
     width: 100%;
+    max-width: 360px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.about-left img{
+    width: 400px;
+    max-width: 360px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.total-customer{
+    position: absolute;
+    top: 22px;
+    left: 22%;
+    transform: translateX(-50%);
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    gap: 10px;
+    z-index: 2;
+    flex-direction: column;
+    animation: slideDown 1s ease-in-out infinite alternate;
+}
+@keyframes slideDown {
+    from {left: 22%;}
+    to {left: 24%;}
+}
+.total-customer-icon{
+    background: var(--primary);
+    color: var(--white);
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 21px;
+}
+.badge{
+    position: absolute;
+    bottom: 20px;
+    left: 80%;
+    width: 250px;
+    transform: translateX(-50%);
+    background: white;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 2;
+    animation: slideDown1 1s ease-in-out infinite alternate;   
+}
+@keyframes slideDown1{
+    from{left: 80%}
+    to {left: 76%;}
+}
+.badge i{
+    font-size: 24px;
+    color: green;
+}
+.about-right{
+    flex: 2 1 400px;
+}
+.about-right p{
+    color: var(--light);
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+.stats{
+    display: flex;
+    flex: flex-wrap;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+.counter{
+    font-size: 2.5rem;;
+}
+.stat{
+    flex: 1 1 150px;
+}
+.contacts{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--lightbg);
+    padding: 10px 16px;
+    border-radius: 24px;
+    font-size: 16px;
+    color: #333;
+}
+.contact i{
+    color: var(--white);
+    background: var(--primary);
+    border-radius: 50%;
+    padding: 10px;
 }
