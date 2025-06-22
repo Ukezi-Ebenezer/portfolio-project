@@ -146,7 +146,7 @@ body::-webkit-scrollbar-thumb {background: var(--primary); border-radius: 4px;}
 }
 .review-summary{
     font-size: 18px;
-    font-weight: 800;
+    font-weight: 400;
     color: var(--light);
 }
 .review-summary .rating{
@@ -155,4 +155,288 @@ body::-webkit-scrollbar-thumb {background: var(--primary); border-radius: 4px;}
 .subtext{
     font-size: 16px;
     color: var(--light);
+    margin-top: 4px;
+}
+.heroProfile{
+    position: relative;
+    text-align: center;
+}
+.heroProfile img{
+    flex: 1 1 400px;
+    width: 500px;
+    z-index: 999;
+    position: relative;
+}
+.shape{
+    background: linear-gradient(45deg, var(--primary) 0%, var(--primary1 100%));
+    animation: morph 8s ease-in-out infinite;
+    border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
+    height: 500px;
+    transition: all 1s ease-in-out;
+    width: 500px;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+}
+@keyframes morph{
+    0% {
+        border-radius: 60% 40% 40% 60% / 40% 60% 40% 60%;
+        background: linear-gradient(45deg, var(--primary) 0%, var(--primary1) 100%);}
+ 
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        background: linear-gradient(45deg, var(--primary1) 0%, var(--primary) 100%);}
+        
+    100% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        background: linear-gradient(45deg, var(--primary) 0%, var(--primary1) 100%);}
+}
+.rotating-badge{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 10s linear infinite;
+    top: 200px;
+}
+.badge-svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: spinRevrse 20s linear infinite;
+}
+.badge-icon{
+    font-size: 32px;
+    z-index: 1;
+    transform: rotate(-15deg);
+    color: var(--primary);
+}
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to{transform: rotate(360deg);}
+}
+@keyframes spinRevrse {
+    from {transform: rotate(360deg);}
+    to{transform: rotate(0deg);}
+}
+.heroButton{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    width: 300px;
+    background: var(--white);
+    z-index: 999;
+    border-radius: 45px;
+}
+.profileBtn,
+.hireBtn{
+    padding: 10px 35px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 25px;
+    border: 2px solid var(--primary);
+    outline: 2px solid transparent;
+    font-size: 1.1rem;
+    transition: 0.4s ease-in-out;
+}
+.hireBtn{
+   background: var(--white);
+   color: var(--primary);
+}
+.profileBtn:hover{
+    background: var(--white);
+    color: var(--primary);
+}
+.hireBtn:hover{
+    background: var(--primary);
+    color: var(--white);
+}
+.socialIcons{
+    flex: 1 1 400px;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.tags{
+    width: 350px;
+    margin: 0 auto;
+}
+.tag,.tag1{
+    padding: 0.6rem 1.2rem;
+    background: var(--dark);
+    color: var(--white);
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    transition: 0.3s ease-in-out;
+}
+.tag1{
+    background: var(--primary);
+}
+.icons{
+    width: 350px;
+    margin: 30px auto;
+}
+.icons i{
+    font-size: 30px;
+    background: var(--white);
+    margin: 10px 5px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 1.8;
+    text-align: center;
+    transition: 0.4s ease-in-out;
+}
+.icons i:hover{
+    background: var(--primary);
+    color: var(--white);
+}
+.our-scrolling-ticker{
+    position: relative;
+    background: var(--dark);
+    padding: 25px 0;
+    z-index: 1;
+    margin-top: -36px;
+}
+.scrolling-ticker-box{
+    --gap: 20px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    gap: 15px;
+    align-items: center;
+}
+.scrolling-content{
+    flex-shrink: 0;
+    display: flex;
+    gap: 15px;
+    min-width: 100%;
+    animation: scroll 40s linear infinite;
+}
+.scrolling-content span{
+    display: inline-block;
+    font-family: math;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2rem;
+    color: var(--white);
+    vertical-align: middle;
+}
+.scrolling-content span img{
+    max-width: 26px;
+    margin-right:  15px;
+    margin-bottom: -2px;
+}
+@keyframes scroll {
+    from {transform: translateX(0);}
+    to {transform: translateX(calc(-100% - var(--gap)));}
+}
+.heading{
+    color: var(--primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.heading2{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.heading2 span{
+    color: var(--primary);
+}
+
+
+.toolSection{
+    background: var(--lightbg);
+}
+
+.tool-container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tools-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tool-card{
+    background: var(--white);
+    border-radius: 40px 40px 20px 20px;
+    padding: 20px 20px 10px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-out;
+}
+
+.tool-card:hover{
+    background: #f77b5b;
+}
+
+.tool-icon{
+    background: var(--lightbg);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.tool-icon img{
+    width: 40px;
+    height: 40px;
+}
+.tool-percent{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.tool-name{
+    font-size: 14px;
+    color: #555;
+}
+
+.about-card{
+    padding:  2rem;
+    max-width:  1200px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin:  50px auto;
+    align-items: center;
+}
+
+.about-left{
+    flex: 1 1 400px;
+    position: relative;
+    text-align: center;
+}
+
+.about-left .bg-shape{
+    background: var(--primary);
+    border-radius: 50% 50% 0 0;
+    width: 100%;
 }
