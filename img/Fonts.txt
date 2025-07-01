@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Linotte
+Author: Joel Carrouche
+Url: http://www.fontsquirrel.com/fonts/linotte
+
+Font: Gilroy
+Author: Radomir Tinkov
+Url: https://www.fontsquirrel.com/fonts/gilroy
